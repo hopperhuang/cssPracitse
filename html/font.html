@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>css font practise</title>
+    <style media="screen">
+      body {
+        font-size: 100%;
+      }
+      #serif {
+        font-family: serif;
+      }
+      #sans {
+        font-family: sans-serif;
+      }
+      #normal {
+        font-style: normal;
+      }
+      #italic {
+        font-style: italic;
+      }
+      #oblique {
+        font-style: oblique;
+      }
+      #em {
+        font-size: 1.5em; /*元素没有设置设置字体大小, em则根据父元素的font-size来计算,如果元素本身又设置字体大小，em值则根据元素本身的font-size来计算*/
+        line-height: 1em;
+      }
+      #variant {
+        font-variant: small-caps;
+      }
+      #weight {
+        font-weight: bolder;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="serif">
+      here font family is serif.
+    </p>
+    <p id="sans">
+      here font-family is sans-serif.
+    </p>
+    <p>
+      see the different above.
+    </p>
+    <p id="normal">
+      normal fontstyle
+    </p>
+    <p id="italic">
+      italic font-style.
+    </p>
+    <p id="oblique">
+      oblique font-style.
+    </p>
+    <p id='em'>
+      this paragrapht font-size is 24p, line-height is also 24px.
+    </p>
+    <p id="variant">
+      you can see small caps here.
+    </p>
+    <p id="weight">
+      here font-weight is bolder.
+    </p>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>anchor css practise</title>
+    <style media="screen">
+      body {
+        font-size: 100%;
+      }
+      h1 {
+        font-size: 4em;
+        color: green;/*当然选择原谅他*/
+        text-align: center;
+      }
+      a:link {
+        color: red;
+      }
+      a:visited {
+        color: green;/*当然选择原谅他*/
+      }
+      a:hover {
+        color: pink;
+      }
+      a:active {
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>this is an anchor practise</h1>
+    <a href="http://wwww.baidu.com">click here go to baidu</a>
+    <p>
+      notice on the link. before visited, the link color is red.
+      after visited, the link color become green.
+      when placing ur mouse on it, it gets pink.
+      click on the link, and don't looose your mouse, you will see it gets orange.
+    </p>
+    <p>
+      remember:
+      a:hover 必须跟在 a:link 和 a:visited后面
+      a:active 必须跟在 a:hover后面
+    </p>
+  </body>
+</html>
