@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>pseudo css train</title>
+    <style media="screen">
+      .first p:first-child{
+        color: green;
+      }
+      .first > span:first-of-type {
+        color: green
+      }
+      em:only-of-type {
+        color: green;
+      }
+      div:nth-of-type(2n+1):hover {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="first">
+      <p>first child, i am green</p>
+      <p>second child, i am not green</p>
+      <p>third child, 我选择原谅他。</p>
+      <span>你会选择原谅我吗？</span>
+      <p>谁年轻没有犯过错，谁没碰上几个人渣，男人就要胸襟广一点，大量一点，<em>当然选择原谅他呀！！</em></p>
+    </div>
+  </body>
+</html>

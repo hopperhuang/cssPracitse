@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>display and visiblity css train</title>
+    <style media="screen">
+      .hidden {
+        width: 50px;
+        height: 50px;
+        visibility: hidden;
+      }
+      .none {
+        display: none;
+      }
+      p {
+        display: inline;
+      }
+      p.inlineBlock {
+        display: inline-block;
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hidden">
+      it still takes up some space here.
+    </div>
+    <div>
+      test divison.
+      50px to the top, because a division is behind this division.
+    </div>
+    <div class="none">
+      it won't take up any space here. Because we set its display attribute to none.
+    </div>
+    <div>
+      it follow the test division, because the division behind this is set to display nothing.
+    </div>
+    <p>
+      first paragraph
+    </p>
+    <p>second paragraph, there is two paragraph here, but i will not change line, for it display as an inline element.</p>
+    <p class="inlineBlock">this paragraph is still in a line, but it can set its width and height, beacuse we set is display inline-block</p>
+  </body>
+</html>
