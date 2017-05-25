@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>tooltips css train</title>
+    <style media="screen">
+      html {
+        width: 100%;
+        height: 100%;
+      }
+      body {
+        width: 100%;
+        height: 100%;
+      }
+      .forgive {
+        position: relative;
+        height: 100%;
+      }
+      h1 {
+        color: green;
+        width: 30%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+      .forgive span {
+        position: absolute;
+        display: block;
+        color: white;
+        background-color: green;
+        width: 30%;
+        padding: 10px;
+        border-radius: 10px;
+        left: 35%;
+        top: 5%;
+        visibility: hidden;
+      }
+      .forgive span::after {
+        content: ' ';
+        border-width: 22px;
+        border-color: transparent transparent green transparent;
+        border-style: solid;
+        position: absolute;
+        top: -45%;
+        left: 50%;
+      }
+      .forgive h1:hover + span {
+        visibility: visible;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="forgive">
+      <h1>当然选择原谅他呀</h1>
+      <span>谁年轻的时候没有犯过几个错，谁年轻的时候没有遇上几个人渣，做男人嘛，就要大量一点，当然选择原谅他呀。</span>
+    </div>
+  </body>
+</html>
