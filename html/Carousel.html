@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Carousel css train</title>
+    <style media="screen">
+      .carousel {
+        width: 200px;
+        height: 200px;
+        position: relative;
+        overflow: hidden;
+      }
+      #content {
+        top: 0%;
+        right: 0%;
+        width: 300%;
+        height: 100%;
+        margin-left: 0%;
+        animation-name: myfirst;
+        animation-duration: 15s;
+        animation-timing-function: ease;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-play-state: running;
+      }
+      @keyframes myfirst {
+        0%   {margin-left: 0%; animation-play-state:paused;}
+        20%  {margin-left: 0%; animation-play-state:running;}
+        40%  {margin-left: -100%; animation-play-state:paused;}
+        60%  {margin-left: -100%; animation-play-state:running;}
+        80%  {margin-left: -200%; animation-play-state:paused;}
+        100% {margin-left: -200%; animation-play-state:running;}
+      }
+      #content img {
+        float: left;
+        width: 33.3%;
+        height: 100%;
+      }
+      .control {
+        width: 200px;
+      }
+      #goLeft {
+        float: left;
+        display: inline-block;
+        width:50%;
+      }
+      #goRight {
+        float: right;
+        display: inline-block;
+        width: 50%;
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="carousel">
+      <div id="content">
+          <img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3444435890,3336528277&fm=23&gp=0.jpg" alt="">
+          <img src="https://timgsa.baidu.com/timg?image&quadivty=80&size=b9999_10000&sec=1495858220260&di=9224d055545126269d6352e1c4e8bdb2&imgtype=0&src=http%3A%2F%2Fimg5.duitang.com%2Fuploads%2Fitem%2F201510%2F22%2F20151022141314_R2mCG.jpeg" alt="">
+          <img src="https://timgsa.baidu.com/timg?image&quadivty=80&size=b9999_10000&sec=1495858249693&di=c9dddc27db01af9fd34f8e552ba79971&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F11%2F16%2F02%2F32H58PICPre.jpg" alt="">
+      </div>
+    </div>
+    <div class="control">
+      <span id="goLeft">left</span>
+      <span id="goRight">right</span>
+    </div>
+  </body>
+  <script type="text/javascript">
+    const goLeftButton = document.getElementById('goLeft');
+    const goRightButton = document.getElementById('goRight');
+    const content = document.getElementById('content');
+    const goLeftFunction = function (event) {
+      const realStyle = window.getComputedStyle(content);
+      let marginLeft = Number.parseInt(realStyle.marginLeft);
+      let width = Number.parseInt(realStyle.width);
+      if (marginLeft > (0 - width * 2/3)) {
+        let width = Number.parseInt(realStyle.width);
+        marginLeft = marginLeft - width * 1/3;
+        marginLeft = marginLeft + 'px';
+        content.style.marginLeft = marginLeft;
+      }
+    }
+    const goRightFunction = function (event) {
+      const realStyle = window.getComputedStyle(content);
+      let marginLeft = Number.parseInt(realStyle.marginLeft);
+      let width = Number.parseInt(realStyle.width);
+      if (marginLeft < 0) {
+        let width = Number.parseInt(realStyle.width);
+        marginLeft = marginLeft + width * 1/3;
+        marginLeft = marginLeft + 'px';
+        content.style.marginLeft = marginLeft;
+      }
+    }
+    goLeftButton.onclick = goLeftFunction;
+    goRightButton.onclick = goRightFunction;
+    console.log(window.getComputedStyle(content).animation)
+  </script>
+</html>
