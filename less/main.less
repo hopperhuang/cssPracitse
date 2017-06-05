@@ -1,0 +1,95 @@
+@charset "UTF-8";
+ul {
+  margin: 0;
+  padding: 20px;
+}
+div {
+  padding: 20px;
+}
+// 我会被编译
+// 好一个大傻逼呀
+
+// 这里是变量
+@red_color:red;
+
+// 这里是混合
+@red_background:green;
+.pinkBorder {
+  border: 2px solid pink;
+}
+.red {
+  color: @red_color;
+  background: @red_background;
+  .pinkBorder;
+}
+
+// 混合带参数 的mixin
+// 带有默认参数的mixin
+.border_two(@border_width:10px) {
+  border: solid yellow @border_width
+}
+.border_radius(@radius:10px) {
+  border-radius: @radius
+}
+.second {
+  .border_two(5px);
+}
+.third {
+  .border_two();
+  .border_radius();
+}
+
+// 匹配模式
+.sanjiao(top,@w:5px,@c:#ccc) {
+  border-width: @w;
+  border-color:@c transparent transparent transparent;
+  border-style: solid;
+}
+.sanjiao(right,@w:5px,@c:#ccc) {
+  border-width: @w;
+  border-color:transparent @c transparent transparent;
+  border-style: solid;
+}
+.sanjiao(bottom,@w:5px,@c:#ccc) {
+  border-width: @w;
+  border-color:transparent transparent @c transparent;
+  border-style: solid;
+}
+.sanjiao(left,@w:5px,@c:#ccc) {
+  border-width: @w;
+  border-color:transparent transparent transparent @c;
+  border-style: solid;
+}
+// 进行匹配
+.sanjiao(@_,@w:5px,@c:#ccc){
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.triangle {
+  .sanjiao(left);
+}
+// 嵌套
+.list {
+  ul {
+    width: 50px;
+    list-style: none;
+    li {
+      &:hover { //代表上一层选择器，就是li
+        color: black;
+      }
+      color: pink;
+      font-size: 30px;
+    }
+  }
+}
+
+//利用aruments
+.border_arg(@width:5px,@style:solid,@color:black) {
+  border: @arguments;
+}
+.sixth {
+  width: 50px;
+  height: 50px;
+  .border_arg();
+}

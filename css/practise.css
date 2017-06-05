@@ -1,0 +1,149 @@
+.m-practise-content .m-practise-content-advertisement {
+  width: 1100px;
+  position: relative;
+}
+.m-practise-content .m-practise-content-advertisement .advertisement-picture {
+  width: 1100px;
+  height: 574px;
+  background-image: url(../img/advertisement-picture.png);
+  background-size: 100% 100%;
+}
+.m-practise-content .m-practise-content-advertisement .templateAwesome {
+  position: absolute;
+  left: 50%;
+  top: 210px;
+}
+.m-practise-content .m-practise-content-advertisement .templateAwesome img{
+  margin-left: -50%;
+}
+
+.m-practise-content .m-practise-content-advertisement .restaurant {
+  position: absolute;
+  left: 50%;
+  top: 344px;
+  font-size: 16px;
+  color:white;
+}
+
+.m-practise-content .m-practise-content-advertisement .restaurant div {
+  position: relative;
+  margin-left: -50%;
+}
+
+.m-practise-content .m-practise-content-advertisement .restaurant div span:nth-child(2n+1) {
+  display: inline-block;
+  width: 40px;
+  border: 0.5px solid white;
+  position: relative;
+  transform: translateY(-150%);
+}
+.m-practise-content .m-practise-content-advertisement .restaurant div span:nth-child(1), .m-practise-content .m-practise-content-advertisement .restaurant div span:nth-child(2) {
+  margin-right: 28px;
+}
+.m-practise-content .m-practise-content-advertisement .theMenu{
+  position: relative;
+  font-size: 20px;
+  color: #FFF;
+  background-color: #F34949;
+  width: 158px;
+  padding:20px 0px ;
+  text-align: center;
+  margin: 0 auto;
+}
+.m-practise-content-menuList {
+  margin-top: 82px;
+}
+.m-practise-content-menuList-menuListItem {
+  display: flex;
+  flex-wrap: wrap;
+}
+.m-practise-content-menuList-menuListItem .item {
+  width: 490px;
+  margin-bottom: 62px;
+}
+.m-practise-content-menuList-menuListItem .item:nth-child(2n+1) {
+  margin-right: 116px;
+}
+.m-practise-content-menuList-menuListItem .item .item-food {
+  font-size: 16px;
+}
+.m-practise-content-menuList-menuListItem .item .item-food .item-food-name {
+  display: inline-block;
+  width: 426px;
+}
+.m-practise-content-menuList-menuListItem .item .item-food .item-food-name span:nth-child(2) {
+  display: inline-block;
+  width: 196px;
+  float: right;
+  border: 1px solid #E3E1E1;
+  transform: translateY(300%);
+}
+.m-practise-content-menuList-menuListItem .item .item-food .item-food-price {
+  display: inline-block;
+  float: right;
+}
+.m-practise-content-menuList-menuListItem .ingredient {
+  margin-top: 8px;
+  color: #E3E1E1;
+}
+.m-practise-content-menuList-button {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #E3E1E1;
+  border: 1px solid #E3E1E1;
+  width: 134px;
+  padding:11px 0px;
+  text-align: center;
+  margin: 0 auto;
+}
+.m-practise-content-featuredDishes {
+  margin-top: 200px;
+}
+.featuredDishes-title p {
+  font-size: 20px;
+  display: inline-block;
+  font-weight: bold;
+}
+.featuredDishes-title span {
+  display: inline-block;
+  width: 2px;
+  height: 2px;
+  border: 3px solid #E3E1E1;
+  border-radius: 50%;
+  float: right;
+  margin-right: 6px;
+  transform: translateY(100%);
+}
+.featuredDishes-display {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+.featuredDishes-display .item {
+  width: 230px
+}
+.featuredDishes-display .item-image {
+  margin-bottom: 30px;
+}
+.featuredDishes-display .item-price span {
+  float: right;
+}
+.featuredDishes-display .item-star {
+  margin-top: 12px;
+}
+.m-practise-content-gallery {
+  margin-top: 202px;
+  margin-bottom: 200px;
+}
+.m-practise-content-gallery .title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 132px;
+}
+.m-practise-content-gallery .title span:nth-child(2){
+  margin-left: 18px;
+  display: inline-block;
+  width: 200px;
+  border: 1px solid #E3E1E1;
+  transform: translateY(-175%);
+}
